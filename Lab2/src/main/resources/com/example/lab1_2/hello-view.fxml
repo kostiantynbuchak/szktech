@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab1_2.PrimaryController">
+
+    <!-- Menu -->
+    <top>
+        <MenuBar>
+            <Menu text="File">
+                <MenuItem onAction="#exitApp" text="Exit"/>
+            </Menu>
+            <Menu text="Edit"/>
+            <Menu text="Help">
+                <MenuItem onAction="#showAbout" text="About"/>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <!-- Główna zawartość -->
+    <center>
+        <VBox>
+            <HBox spacing="30">
+                <VBox spacing="10">
+                    <RadioButton onAction="#setBlue" text="Niebieski">
+                        <toggleGroup>
+                            <ToggleGroup fx:id="T1" />
+                        </toggleGroup>
+                    </RadioButton>
+
+                    <RadioButton onAction="#setGreen" text="Zielony">
+                        <toggleGroup>
+                            <ToggleGroup fx:id="$T1" />
+                        </toggleGroup>
+                    </RadioButton>
+
+                    <RadioButton onAction="#setRed" text="Czerwony">
+                        <toggleGroup>
+                            <ToggleGroup fx:id="T1" />
+                        </toggleGroup>
+                    </RadioButton>
+
+                    <padding>
+                        <Insets top="20" />
+                    </padding>
+                </VBox>
+
+                <VBox spacing="10">
+                    <RadioButton onAction="#setText1" text="1" />
+                    <RadioButton onAction="#setText2" text="2" />
+                    <RadioButton onAction="#setText3" text="3" />
+                </VBox>
+
+                <VBox spacing="10">
+                    <CheckBox text="CheckBox" />
+                    <CheckBox text="CheckBox" />
+                    <CheckBox text="CheckBox" />
+                </VBox>
+            </HBox>
+
+            <Label fx:id="l_info" style="-fx-font-size: 20px; -fx-text-fill: blue;" text="Laboratorium 2" />
+
+            <!-- Zakładki -->
+            <TabPane>
+                <Tab text="Tab1" />
+                <Tab text="Tab1">
+                    <VBox spacing="10">
+                        <!--<ToggleGroup fx:id="imageGroup"/>-->
+                        <RadioButton onAction="#showImage1" text="RadioButton" />
+                        <RadioButton onAction="#showImage2" text="RadioButton" />
+                        <RadioButton onAction="#showImage3" text="RadioButton" />
+                        <!--ImageView fx:id="obrazek" fitHeight="200" fitWidth="300"/-->
+                    </VBox>
+                </Tab>
+            </TabPane>
+        </VBox>
+    </center>
+
+</BorderPane>
