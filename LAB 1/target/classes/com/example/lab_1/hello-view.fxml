@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.layout.HBox?>
+<TabPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab_1.HelloController">
+    <Tab text="Kalkulator">
+        <VBox spacing="10" alignment="CENTER">
+            <TextField fx:id="num1Field" promptText="Wporwadź pierwszą liczbę: "/>
+            <TextField fx:id="num2Field" promptText="Wprowadź drugą liczbę: "/>
+            <HBox spacing="10">
+                <Button text="+" onAction="#handleAdd"/>
+                <Button text="-" onAction="#handleSubstract"/>
+                <Button text="x" onAction="#handleMultiply"/>
+                <Button text="/" onAction="#handleDivide"/>
+            </HBox>
+            <Label fx:id="calcresultlabel" text="Wynik: "/>
+        </VBox>
+    </Tab>
+    <Tab text="Licznik znaków i słów">
+        <VBox spacing="10" alignment="CENTER">
+            <TextField fx:id="inputField" promptText="Wprowadź text: "/>
+            <Button text="Oblicz" onAction="#handleOblicz"/>
+            <Label fx:id="countresultlabel" text="Znaki: 0, Słowa: 0"/>
+        </VBox>
+    </Tab>
+</TabPane>
